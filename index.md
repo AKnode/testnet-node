@@ -12,3 +12,5 @@
 ### I build a community on discord :
  `NODE NODE AN`
 - Discord link is [you can click the link here](https://discord.gg/mSecguCyht) 😄
+
+![](https://github.com/AKnode/rekapan-node/blob/main/img/Radtek2.png)
