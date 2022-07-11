@@ -1,4 +1,9 @@
-# 🚀 setup wallet
+---
+tags: [guides]
+icon: dot
+---
+
+# setup wallet
 
 Add New Wallet
 ```

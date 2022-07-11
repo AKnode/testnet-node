@@ -1,4 +1,9 @@
-# ✨ Another-1
+---
+tags: [guides]
+icon: dot
+---
+
+# Another-1
 
 
 ## Hardware Requirements

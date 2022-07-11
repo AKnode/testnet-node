@@ -1,4 +1,9 @@
-# ✨ sei-network 🐉
+---
+tags: [guides]
+icon: dot
+---
+
+# sei-network 🐉
 ---
 # sei node setup for Devnet — sei-devnet-1
 ---

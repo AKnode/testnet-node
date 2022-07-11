@@ -1,3 +1,8 @@
+---
+label: Welcome
+icon: home
+---
+
 # 👋 welcome
 
 ### Hi I'm AKnode , nice to meet you 👋

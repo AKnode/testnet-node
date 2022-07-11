@@ -1,6 +1,9 @@
+---
+tags: [guides]
+icon: dot
+---
 
-
-# ✨ Massalab guide TEST.12.0
+# Massalab TEST.12.0
 
 ### Update & Dependencies..
 ```
