@@ -19,8 +19,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ### Nanti ada pilihan : 
 1. Procced with installation  (default)    2. Customize Installation
 3. Cancel Installation
-# Ketik 1
-# Terus tunggu sampe selesai installation
+### Ketik 1
+### Terus tunggu sampe selesai installation
 
 ```
 source $HOME/.cargo/env
