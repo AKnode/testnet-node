@@ -12,3 +12,7 @@
 ### I build a community on discord :
  `NODE NODE AN`
 - Discord link is [you can click the link here](https://discord.gg/mSecguCyht) 😄
+
+<p align="center">
+  <img height="100" height="auto" src="https://github.com/AKnode/rekapan-node/blob/main/img/Radtek2.png">
+</p>
