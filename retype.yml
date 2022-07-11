@@ -24,3 +24,7 @@ favicon: static/aknode.ico
 
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
+  links:
+    - text: License
+      link: license.md
+      icon: shield-check
