@@ -1,6 +1,6 @@
 input: .
 output: .retype
-url: # Add your website address here
+url: http://aknode.site/testnet-node/
 branding:
   title: ✨ AKNODE ⚡
   label: tutorial
