@@ -13,4 +13,4 @@
  `NODE NODE AN`
 - Discord link is [you can click the link here](https://discord.gg/mSecguCyht) 😄
 
-![](static/aknode.icon)
+![](static/aknode.ico)
