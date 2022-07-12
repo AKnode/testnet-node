@@ -1,9 +1,9 @@
 ---
-tags: [guides]
-icon: dot
+icon: star
+order: 2000
 ---
 
-# setup - instalation 🐉
+# 1# setup - instalation 🐉
 ---
 # sei node setup for atlantic-1
 ---

@@ -1,9 +1,9 @@
 ---
-tags: [guides]
-icon: dot
+icon: star
+order: 2000
 ---
 
-# create gentx on atlantic-1
+# gentx for atlantic-1
 
 ## Setting up vars
 Here you have to put name of your moniker (validator) that will be visible in explorer

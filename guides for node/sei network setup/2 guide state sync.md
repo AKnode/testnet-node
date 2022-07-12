@@ -3,7 +3,7 @@ icon: star
 order: 2000
 ---
 
-# guide + state sync guud
+# 2# setup - state sync
 
 ### set rpc
 ```
