@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.710935451124">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.710947627240">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -28,11 +28,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/aknode.ico" rel="icon" />
-    <link href="../../../resources/css/retype.css?v=2.3.0.710935451124" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.3.0.710947627240" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.710935451124" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.710947627240" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.710935451124" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.710947627240" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -224,35 +224,6 @@
         <span>2# setup - state sync</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="set-rpc">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#set-rpc">#</doc-anchor-trigger>
-        <span>set rpc</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">RPC=&quot;http://rpc2.bonded.zone:21157&quot;</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="set-variables">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#set-variables">#</doc-anchor-trigger>
-        <span>set variables</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">LATEST_HEIGHT=$(curl -s $RPC/block | jq -r .result.block.header.height); \
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
-TRUST_HASH=$(curl -s &quot;$RPC/block?height=$BLOCK_HEIGHT&quot; | jq -r .result.block_id.hash)</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="check-variables">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#check-variables">#</doc-anchor-trigger>
-        <span>check variables</span>
-    </h3>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH</code></pre>
-</doc-codeblock></div>
 <doc-anchor-target id="stop-the-node-and-reset">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#stop-the-node-and-reset">#</doc-anchor-trigger>
@@ -260,7 +231,17 @@ TRUST_HASH=$(curl -s &quot;$RPC/block?height=$BLOCK_HEIGHT&quot; | jq -r .result
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">sudo systemctl stop seid &amp;&amp; seid tendermint unsafe-reset-all</code></pre>
+<pre class="language-none"><code v-pre class="language-none">sudo systemctl stop seid
+seid tendermint unsafe-reset-all --home $HOME/.sei</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="set-addrbookjson">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#set-addrbookjson">#</doc-anchor-trigger>
+        <span>set addrbook.json</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">wget -O $HOME/.sei/config/addrbook.json &quot;https://raw.githubusercontent.com/StakeTake/guidecosmos/main/sei/atlantic-1/addrbook.json&quot;</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="configure-persistent-peers">
     <h3>
@@ -269,12 +250,33 @@ TRUST_HASH=$(curl -s &quot;$RPC/block?height=$BLOCK_HEIGHT&quot; | jq -r .result
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">peers=&quot;3f6e68bd476a7cd3f491105da50306f8ebb74643@rpc2.bonded.zone:21156&quot;
-sed -i.bak -e &quot;s/^persistent_peers *=.*/persistent_peers = \&quot;$peers\&quot;/&quot; $HOME/.sei/config/config.toml
+<pre class="language-none"><code v-pre class="language-none">SEEDS=&quot;&quot;
+PEERS=&quot;e3b5da4caea7370cd85d7738eedaec8f56c5be28@144.76.224.246:36656,a37d65086e78865929ccb7388146fb93664223f7@18.144.13.149:26656,8ff4bd654d7b892f33af5a30ada7d8239d6f467b@91.223.3.190:51656,c4e8c9b1005fe6459a922f232dd9988f93c71222@65.108.227.133:26656&quot;; \
+sed -i.bak -e &quot;s/^seeds *=.*/seeds = \&quot;$SEEDS\&quot;/; s/^persistent_peers *=.*/persistent_peers = \&quot;$PEERS\&quot;/&quot; $HOME/.sei/config/config.toml</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="set-rpc">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#set-rpc">#</doc-anchor-trigger>
+        <span>set RPC</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">SNAP_RPC=&quot;http://144.76.224.246:36657&quot;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="set-variable">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#set-variable">#</doc-anchor-trigger>
+        <span>set variable</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
+TRUST_HASH=$(curl -s &quot;$SNAP_RPC/block?height=$BLOCK_HEIGHT&quot; | jq -r .result.block_id.hash)
 
 
 sed -i.bak -E &quot;s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\&quot;$RPC,$RPC\&quot;| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\&quot;$SNAP_RPC,$SNAP_RPC\&quot;| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\&quot;$TRUST_HASH\&quot;| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\&quot;\&quot;|&quot; $HOME/.sei/config/config.toml
