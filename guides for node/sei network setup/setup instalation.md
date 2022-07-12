@@ -3,7 +3,7 @@ tags: [guides]
 icon: dot
 ---
 
-# sei-network 🐉
+# setup - instalation 🐉
 ---
 # sei node setup for atlantic-1
 ---
