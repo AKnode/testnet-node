@@ -1,6 +1,6 @@
 ---
 tags: [guides]
-icon: dot
+icon: star
 ---
 
 # Another-1
