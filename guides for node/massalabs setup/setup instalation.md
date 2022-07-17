@@ -1,6 +1,6 @@
 ---
 tags: [guides]
-icon: dot
+icon: star
 ---
 
 # Massalab TEST.12.0
