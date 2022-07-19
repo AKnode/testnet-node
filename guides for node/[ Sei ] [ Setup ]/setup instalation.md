@@ -3,9 +3,9 @@ icon: star
 order: 2000
 ---
 
-# 1# setup - instalation 🐉
+# setup - instalation 🐉
 ---
-# sei node setup for atlantic-1
+sei node setup for atlantic-1
 ---
 Official documentation:
 >- [Validator setup instructions](https://docs.seinetwork.io/nodes-and-validators/joining-devnets)

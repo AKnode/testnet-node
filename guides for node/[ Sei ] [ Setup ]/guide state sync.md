@@ -3,7 +3,7 @@ icon: star
 order: 2000
 ---
 
-# 2# setup - state sync
+setup - state sync
 
 ### stop the node and reset
 ```
