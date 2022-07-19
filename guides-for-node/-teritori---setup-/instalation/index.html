@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.711567898373">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.711569063765">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>[Teritorid] [Setup]</title>
-    <meta name="title" content="[Teritorid] [Setup]">
-    <meta name="description" content="Here is the configuration of the server we are using:" />
+    <title>Instalation</title>
+    <meta name="title" content="Instalation">
+    <meta name="description" content="Official documentation:" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://aknode.site/guides-for-node/-teritori---setup-/instalation/" />
@@ -19,24 +19,23 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aknode.site/guides-for-node/-teritori---setup-/instalation/">
-    <meta property="og:title" content="[Teritorid] [Setup]">
-    <meta property="og:description" content="Here is the configuration of the server we are using:">
+    <meta property="og:title" content="Instalation">
+    <meta property="og:description" content="Official documentation:">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://aknode.site/guides-for-node/-teritori---setup-/instalation/">
-    <meta property="twitter:title" content="[Teritorid] [Setup]">
-    <meta property="twitter:description" content="Here is the configuration of the server we are using:">
+    <meta property="twitter:title" content="Instalation">
+    <meta property="twitter:description" content="Official documentation:">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/aknode.ico" rel="icon" />
-    <link href="../../../resources/css/retype.css?v=2.4.0.711567898373" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.711569063765" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.711567898373" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.711569063765" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.711567898373" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../../resources/js/prism.js?v=2.4.0.711567898373" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.711569063765" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -222,182 +221,171 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="teritorid-setup" class="break-words">
+<doc-anchor-target id="instalation" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#teritorid-setup">#</doc-anchor-trigger>
-        <span>[Teritorid] [Setup]</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#instalation">#</doc-anchor-trigger>
+        <span>Instalation</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="server-configuration">
+<hr />
+<doc-anchor-target id="teritori">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#server-configuration">#</doc-anchor-trigger>
-        <span>Server Configuration</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#teritori">#</doc-anchor-trigger>
+        <span>teritori</span>
     </h2>
 </doc-anchor-target>
-<p>Here is the configuration of the server we are using:</p>
+<p>Official documentation:</p>
+<blockquote>
 <ul>
-<li>No. of CPUs: 2</li>
-<li>Memory: 2GB</li>
-<li>Disk: 80GB SSD</li>
-<li>OS: Ubuntu 18.04 LTS</li>
+<li><a href="https://github.com/TERITORI/teritori-chain/blob/main/testnet/teritori-testnet-v2/README.md">Validator setup instructions</a></li>
 </ul>
-<p>Allow all incoming connections from TCP port 26656 and 26657</p>
-<p>Notes on the configurations.</p>
-<ol>
-<li>Multicore is important, regardless the less CPU time usage</li>
-<li>teritorid uses less than 1GB memory and 2GB should be enough for now.
-Once your new server is running, login to the server and upgrade your packages.</li>
-</ol>
-<doc-anchor-target id="setup-your-machine">
+</blockquote>
+<p>Chain explorer:</p>
+<blockquote>
+<ul>
+<li><a href="https://teritori.explorers.guru/">Explorer from Nodes.Guru</a></li>
+</ul>
+</blockquote>
+<hr />
+<doc-anchor-target id="hardware-requirements">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setup-your-machine">#</doc-anchor-trigger>
-        <span>Setup your machine</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#hardware-requirements">#</doc-anchor-trigger>
+        <span>Hardware Requirements</span>
     </h2>
 </doc-anchor-target>
-<p>If you already have go 1.18+ and packages up to date, you can skip this part and jump to the second section: <doc-anchor-trigger to="#setup-the-chain">Setup the chain</doc-anchor-trigger><br />
-Make sure your machine is up to date:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">apt update &amp;&amp; apt upgrade -y </code></pre>
-</doc-codeblock></div>
-<p>Install few packages:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">apt install build-essential git curl gcc make jq -y</code></pre>
-</doc-codeblock></div>
-<p>Install Go 1.18+:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">wget -c https://go.dev/dl/go1.18.3.linux-amd64.tar.gz &amp;&amp; rm -rf /usr/local/go &amp;&amp; tar -C /usr/local -xzf go1.18.3.linux-amd64.tar.gz &amp;&amp; rm -rf go1.18.3.linux-amd64.tar.gz</code></pre>
-</doc-codeblock></div>
-<p>Setup your environnement (you can skip this part if you already had go installed before):</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">echo 'export GOROOT=/usr/local/go' &gt;&gt; $HOME/.bash_profile
-echo 'export GOPATH=$HOME/go' &gt;&gt; $HOME/.bash_profile
-echo 'export GO111MODULE=on' &gt;&gt; $HOME/.bash_profile
-echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' &gt;&gt; $HOME/.bash_profile &amp;&amp; . $HOME/.bash_profile</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="setup-the-chain">
+<doc-anchor-target id="like-any-cosmos-sdk-chain-the-hardware-requirements-are-pretty-modest">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setup-the-chain">#</doc-anchor-trigger>
-        <span>Setup the chain</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#like-any-cosmos-sdk-chain-the-hardware-requirements-are-pretty-modest">#</doc-anchor-trigger>
+        <span>Like any Cosmos-SDK chain, the hardware requirements are pretty modest.</span>
     </h2>
 </doc-anchor-target>
-<p>Clone the Teritori repository and install the v2 of testnet:</p>
+<doc-anchor-target id="minimum-hardware-requirements">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#minimum-hardware-requirements">#</doc-anchor-trigger>
+        <span>Minimum Hardware Requirements</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>3x CPUs; the faster clock speed the better</li>
+<li>4GB RAM</li>
+<li>80GB Disk</li>
+<li>Permanent Internet connection (traffic will be minimal during devnet; 10Mbps will be plenty - for production at least 100Mbps is expected)</li>
+</ul>
+<doc-anchor-target id="recommended-hardware-requirements">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#recommended-hardware-requirements">#</doc-anchor-trigger>
+        <span>Recommended Hardware Requirements</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>4x CPUs; the faster clock speed the better</li>
+<li>8GB RAM</li>
+<li>200GB of storage (SSD or NVME)</li>
+<li>Permanent Internet connection (traffic will be minimal during devnet; 10Mbps will be plenty - for production at least 100Mbps is expected)</li>
+</ul>
+<hr />
+<doc-anchor-target id="auto-installation">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#auto-installation">#</doc-anchor-trigger>
+        <span>auto Installation</span>
+    </h4>
+</doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">git clone https://github.com/TERITORI/teritori-chain &amp;&amp; cd teritori-chain &amp;&amp; git checkout teritori-testnet-v2 &amp;&amp; make install</code></pre>
-</doc-codeblock></div>
-<p>Init the chain:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">teritorid init &lt;YOUR_MONIKER&gt; --chain-id teritori-testnet-v2</code></pre>
-</doc-codeblock></div>
-<p>Add config file:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">wget -O $HOME/.teritorid/config/addrbook.json https://raw.githubusercontent.com/StakeTake/guidecosmos/main/teritori/teritori-testnet-v2/addrbook.json
-
-SEEDS=&quot;&quot;
-PEERS=&quot;c1fdbc3d0679bcaf4cfe3aeaf5247ba12b7daa6f@49.12.236.218:26656,0b42fd287d3bb0a20230e30d54b4b8facc412c53@176.9.149.15:26656,2f394edda96be07bf92b0b503d8be13d1b9cc39f@5.9.40.222:26656,8ce81af6b4acee9688b9b3895fc936370321c0a3@78.46.106.69:26656&quot;; \
-sed -i.bak -e &quot;s/^seeds *=.*/seeds = \&quot;$SEEDS\&quot;/; s/^persistent_peers *=.*/persistent_peers = \&quot;$PEERS\&quot;/&quot; $HOME/.teritorid/config/config.toml
-
-SNAP_RPC=&quot;http://teritori.stake-take.com:26657&quot;
-
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
-TRUST_HASH=$(curl -s &quot;$SNAP_RPC/block?height=$BLOCK_HEIGHT&quot; | jq -r .result.block_id.hash)
-
-sed -i.bak -E &quot;s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\&quot;$SNAP_RPC,$SNAP_RPC\&quot;| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\&quot;$TRUST_HASH\&quot;| ; \
-s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\&quot;\&quot;|&quot; $HOME/.teritorid/config/config.toml</code></pre>
+<pre class="language-none"><code v-pre class="language-none">wget -q -O teritori.sh https://raw.githubusercontent.com/AKnode/rekapan-node/main/teritori/teritori.sh &amp;&amp; chmod +x teritori.sh &amp;&amp; sudo /bin/bash teritori.sh</code></pre>
 </doc-codeblock></div>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">teritorid tendermint unsafe-reset-all --home $HOME/.teritorid</code></pre>
+<pre class="language-none"><code v-pre class="language-none">source $HOME/.bash_profile</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="create-service">
+<doc-anchor-target id="logs-and-status">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#logs-and-status">#</doc-anchor-trigger>
+        <span>Logs and status</span>
+    </h3>
+</doc-anchor-target>
+<p>Logs</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">sudo journalctl -u teritorid -f --no-hostname -o cat</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="validator-info">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#create-service">#</doc-anchor-trigger>
-        <span>Create service</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#validator-info">#</doc-anchor-trigger>
+        <span>Validator Info</span>
     </h2>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">tee &lt;&lt;EOF &gt;/dev/null /etc/systemd/system/teritorid.service
-[Unit]
-Description=Teritori Cosmos daemon
-After=network-online.target
-
-[Service]
-User=root
-ExecStart=/root/go/bin/teritorid start
-Restart=on-failure
-RestartSec=3
-LimitNOFILE=4096
-
-[Install]
-WantedBy=multi-user.target
-EOF</code></pre>
+<pre class="language-none"><code v-pre class="language-none">teritorid status 2&gt;&amp;1 | jq .SyncInfo</code></pre>
 </doc-codeblock></div>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">systemctl enable teritorid
-systemctl daemon-reload
-systemctl restart teritorid</code></pre>
+<pre class="language-none"><code v-pre class="language-none">teritorid status 2&gt;&amp;1 | jq .ValidatorInfo</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="to-cek-logs">
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">teritorid status 2&gt;&amp;1 | jq .NodeInfo</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="setup-wallet">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#to-cek-logs">#</doc-anchor-trigger>
-        <span>to cek logs</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setup-wallet">#</doc-anchor-trigger>
+        <span>setup wallet</span>
     </h2>
 </doc-anchor-target>
+<p>Add New Wallet</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">teritorid start  </code></pre>
+<pre class="language-none"><code v-pre class="language-none">teritorid keys add wallet</code></pre>
 </doc-codeblock></div>
-<p>Wait for the chain to synchronize with the current block... you can do the next step during this time</p>
-<doc-anchor-target id="to-cek-info">
+<p>Recover Existing Wallet</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">teritorid keys add wallet --recover</code></pre>
+</doc-codeblock></div>
+<p>List All Wallets</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">teritorid keys list</code></pre>
+</doc-codeblock></div>
+<p>Delete Wallet</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">teritorid keys delete wallet</code></pre>
+</doc-codeblock></div>
+<hr />
+<doc-anchor-target id="setup-validator">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#to-cek-info">#</doc-anchor-trigger>
-        <span>to cek info</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setup-validator">#</doc-anchor-trigger>
+        <span>setup validator</span>
     </h2>
 </doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">teritorid status 2&gt;&amp;1 | jq .SyncInfo
-teritorid status 2&gt;&amp;1 | jq .NodeInfo
-teritorid status 2&gt;&amp;1 | jq .ValidatorInfo</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="setup-your-account">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setup-your-account">#</doc-anchor-trigger>
-        <span>Setup your account</span>
-    </h2>
+<doc-anchor-target id="cek-your-balance">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cek-your-balance">#</doc-anchor-trigger>
+        <span>cek your balance</span>
+    </h3>
 </doc-anchor-target>
-<p>Create an account:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">teritorid keys add &lt;YOUR_KEY&gt;</code></pre>
+<pre class="language-none"><code v-pre class="language-none">teritorid query bank balances $TERITORI_WALLET_ADDRESS</code></pre>
 </doc-codeblock></div>
-<p>You can also you <code v-pre>--recover</code> flag to use an already existed key (but we recommend for security reason to use one key per chain to avoid total loss of funds in case one key is missing)</p>
-<p>Join our <a href="https://discord.gg/teritori">Discord</a> and request fund on the <code v-pre>Faucet</code> channel using this command:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">$request &lt;YOUR_TERITORI_ADDRESS&gt;</code></pre>
+<pre class="language-none"><code v-pre class="language-none">teritorid tx staking create-validator \
+  --amount 1000000utori \
+  --from $WALLET \
+  --commission-max-change-rate &quot;0.01&quot; \
+  --commission-max-rate &quot;0.2&quot; \
+  --commission-rate &quot;0.07&quot; \
+  --min-self-delegation &quot;1&quot; \
+  --pubkey  $(seid tendermint show-validator) \
+  --moniker $NODENAME \
+  --chain-id $TERITORI_CHAIN_ID</code></pre>
 </doc-codeblock></div>
-<p>You can check if you have received fund once your node will be synched using this CLI command:</p>
+<doc-anchor-target id="edit-validator">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#edit-validator">#</doc-anchor-trigger>
+        <span>edit validator</span>
+    </h3>
+</doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">teritorid query bank balances &lt;YOUR_TERITORI_ADDRESS&gt; --chain-id teritori-testnet-v2</code></pre>
+<pre class="language-none"><code v-pre class="language-none">teritorid tx staking edit-validator \
+  --moniker=$NODENAME \
+  --identity=&lt;your_keybase_id&gt; \
+  --website=&quot;&lt;your_website&gt;&quot; \
+  --details=&quot;&lt;your_validator_description&gt;&quot; \
+  --chain-id=$TERITORI_CHAIN_ID \
+  --from=$WALLET</code></pre>
 </doc-codeblock></div>
-<p>Once the fund are received and chain is synchronized you can create your validator:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">teritorid tx staking create-validator \
- --commission-max-change-rate=0.01 \
- --commission-max-rate=0.2 \
- --commission-rate=0.05 \
- --amount 1000000utori \
- --pubkey=$(teritorid tendermint show-validator) \
- --moniker=&lt;YOUR_MONIKER&gt; \
- --chain-id=teritori-testnet-v2 \
- --details=&quot;&lt;DESCRIPTION_OF_YOUR_VALIDATOR&gt;&quot; \
- --security-contact=&quot;&lt;YOUR_EMAIL_ADDRESS&gt;&quot; \
- --website=&quot;&lt;YOUR_WEBSITE&gt;&quot; \
- --identity=&quot;&lt;YOUR_KEYBASE_ID&gt;&quot; \
- --min-self-delegation=1000000 \
- --from=&lt;YOUR_KEY&gt;</code></pre>
-</doc-codeblock></div>
-<p>FAQ: Coming soon.</p>
-<p>Join us on <a href="https://discord.gg/uBNazcxxEf">Discord</a> for Testnet v2 Village discussions.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -474,6 +462,6 @@ teritorid status 2&gt;&amp;1 | jq .ValidatorInfo</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "[Teritorid] [Setup]", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Instalation", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
