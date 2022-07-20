@@ -1,3 +1,7 @@
+---
+tags: [guides]
+icon: star
+---
 
 ## Hardware Requirements
 Like any Cosmos-SDK chain, the hardware requirements are pretty modest.
