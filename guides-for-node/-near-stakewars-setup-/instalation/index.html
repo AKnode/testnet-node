@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.711664176799">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.711667873300">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,11 +33,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../static/aknode.ico" rel="icon" />
-    <link href="../../../resources/css/retype.css?v=2.4.0.711664176799" rel="stylesheet" />
+    <link href="../../../resources/css/retype.css?v=2.4.0.711667873300" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.711664176799" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../../resources/js/config.js?v=2.4.0.711667873300" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.711664176799" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.4.0.711667873300" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -313,7 +313,11 @@ cargo build -p neard --release --features shardnet</code></pre>
 rm ~/.near/config.json ~/.near/genesis.json</code></pre>
 </doc-codeblock></div>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json &amp;&amp; rm ~/.near/genesis.json &amp;&amp; wget -O ~/.near/genesis.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/genesis.json</code></pre>
+<pre class="language-none"><code v-pre class="language-none">wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json 
+wget -O ~/.near/genesis.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/genesis.json</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">mv ~/.near/data ~/.near/data-fork1 &amp;&amp; rm ~/.near/config.json &amp;&amp; wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json &amp;&amp; rm ~/.near/genesis.json &amp;&amp; wget -O ~/.near/genesis.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/genesis.json</code></pre>
 </doc-codeblock></div>
 <p>Now you will need to create a wallet <a href="https://wallet.shardnet.near.org/">https://wallet.shardnet.near.org/</a>
 WARNING! If you had a wallet previously to the hard fork, you may need to recreate it! Forget the old mnemonic and do everything from scratch.</p>
@@ -371,6 +375,11 @@ EOF</code></pre>
 sudo systemctl enable neard 
 sudo systemctl start neard
 journalctl -f -u neard</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">sudo apt install ccze
+
+journalctl -n 100 -f -u neard | ccze -A</code></pre>
 </doc-codeblock></div>
 <p>Now let’s deploy a contract of our staking pool with 30 NEAR staked!</p>
 <div class="codeblock-wrapper"><doc-codeblock>
