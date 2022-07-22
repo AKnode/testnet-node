@@ -200,7 +200,7 @@ near validators current | grep $POOLID >> $LOGS/all.log
 near validators next | grep $POOLID >> $LOGS/all.log
 ```
 ```
-contrab -e
+crontab -e
 ```
 ```
 */5 * * * * sh $HOME/nearcore/scripts/ping.sh
