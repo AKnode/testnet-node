@@ -44,8 +44,7 @@ sudo npm install -g near-cli
 Set up the environment. Be aware that you should input these commands anytime you open a new session! Otherwise testnet environment will be used!
 ```
 export NEAR_ENV=shardnet 
-echo ‘export NEAR_ENV=shardnet’ >> ~/.bashrc 
-source ~/.bashrc
+echo ‘export NEAR_ENV=shardnet’ >> ~/.bashrc
 ```
 
 Install cargo and rust
@@ -59,7 +58,7 @@ Now download and build binary
 git clone https://github.com/near/nearcore 
 cd nearcore 
 git fetch 
-git checkout 8448ad1ebf27731a43397686103aa5277e7f2fcf
+git checkout 0f81dca95a55f975b6e54fe6f311a71792e21698
 cargo build -p neard --release --features shardnet
 ```
 ### check the version
@@ -178,20 +177,37 @@ near validators next
 
 Finally, we can set the ping (every 5 minutes)
 ```
-nano ping.sh
+mkdir $HOME/nearcore/logs
+```
+```
+nano $HOME/nearcore/scripts/ping.sh
+```
+Edit "PoolID" && "AccountID"
+```
+#!/bin/sh
+# Ping call to renew Proposal added to crontab
 
 export NEAR_ENV=shardnet
-near call 666aknode.factory.shardnet.near ping '{}' --accountId aknode.shardnet.near --gas=300000000000000
+export LOGS=$HOME/nearcore/logs
+export POOLID="PoolID"
+export ACCOUNTID="AccountID"
 
-exit nano
-
-chmod +x ping.sh
+echo "---" >> $LOGS/all.log
+date >> $LOGS/all.log
+near call $POOLID.factory.shardnet.near ping '{}' --accountId $ACCOUNTID.shardnet.near --gas=300000000000000 >> $LOGS/all.log
+near proposals | grep $POOLID >> $LOGS/all.log
+near validators current | grep $POOLID >> $LOGS/all.log
+near validators next | grep $POOLID >> $LOGS/all.log
+```
+```
+contrab -e
+```
+```
+*/5 * * * * sh $HOME/nearcore/scripts/ping.sh
 ```
 
-Set up cron job for every 5 minutes! You can make sure script is working in the explorer!
-
+cek logs
 ```
-crontab -e 
-*/5 * * * *  $HOME/ping.sh >> $HOME/ping.log
+cat $HOME/nearcore/logs/all.log
 ```
 
