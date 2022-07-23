@@ -44,7 +44,8 @@ sudo npm install -g near-cli
 Set up the environment. Be aware that you should input these commands anytime you open a new session! Otherwise testnet environment will be used!
 ```
 export NEAR_ENV=shardnet 
-echo ‘export NEAR_ENV=shardnet’ >> ~/.bashrc
+echo "export NEAR_ENV=shardnet" >> $HOME/.bashrc
+source $HOME/.bashrc
 ```
 
 Install cargo and rust
@@ -205,7 +206,10 @@ crontab -e
 ```
 */5 * * * * sh $HOME/nearcore/scripts/ping.sh
 ```
-
+call
+```
+sh $HOME/nearcore/scripts/ping.sh
+```
 cek logs
 ```
 cat $HOME/nearcore/logs/all.log
